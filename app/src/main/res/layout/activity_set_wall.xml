@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.botty.wall.setWall">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.botty.wall" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/set_wall_ribbon"
+        style="@style/Botty.RibbonTouch"
+        android:src="@drawable/ic_action_check"
+        android:padding="15dp"
+        android:scaleType="centerCrop"
+        android:elevation="5dp"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="15dp" />
+
+</FrameLayout>
