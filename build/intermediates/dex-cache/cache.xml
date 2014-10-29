@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/classes-9b9bacbb9380071b71a742703ac906bb912770bc.jar"
+        jar="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/exploded-aar/com.pkmmte.view/circularimageview/1.1/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="c341a7ad32bc2eef9dcfab239262b77ac60788cc"/>
+    <item
+        dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/classes-3ecad163667893c3fbd37159f5cdf29c92f84a66.jar"
+        jar="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6"/>
+    <item
+        dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/classes-58ae437335b17a22f15273e515c4b8e4a61e4bb9.jar"
+        jar="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="efeda77c808750cb670ee9c48d8a1835d89dbcb2"/>
+    <item
+        dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/classes-99198c34406e187d9e237655af4cd99172afb621.jar"
+        jar="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/exploded-aar/com.ikimuhendis/ldrawer/0.1/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="d3bec8d72ee2aa86e69f66375c31f2161b7bb324"/>
+    <item
+        dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/classes-153bc18d5249c6ec6e17765ba7264d47ac16330b.jar"
+        jar="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="7d2525cba8ed61fff102977caed964fc22061e34"/>
+    <item
+        dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/classes-93b85d407a005ccfb386cfbaf009517c67fbbc91.jar"
+        jar="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="95fd37732ec852e99f07eeb516a3650172f1d136"/>
+    <item
+        dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-31507a68e55838c1429b85deca2d139671b4d462.jar"
+        jar="/home/ivanbotty/Documenti/android-studio/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e"/>
+    <item
+        dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/urlimageviewhelper-1.0.4-356058afe541d75e03d12c73b18b22799fdfe785.jar"
+        jar="/home/ivanbotty/.gradle/caches/modules-2/files-2.1/com.koushikdutta.urlimageviewhelper/urlimageviewhelper/1.0.4/67125d743e0035a1b157ba8210c2abf1ff374e10/urlimageviewhelper-1.0.4.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="67125d743e0035a1b157ba8210c2abf1ff374e10"/>
+    <item
+        dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-ca741c35af2c1062f51aab808a419a5170a375b1.jar"
+        jar="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0"/>
+
+</pre-dex-items>
