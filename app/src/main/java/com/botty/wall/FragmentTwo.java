@@ -3,14 +3,12 @@ package com.botty.wall;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
-
-
 
 public class FragmentTwo  extends Fragment {
 
@@ -38,8 +36,7 @@ public class FragmentTwo  extends Fragment {
 
         View view = inflater.inflate(R.layout.activity_wall, container,
                 false);
-
-        final CustomGrid adapter = new CustomGrid(getActivity(), own);
+        final CustomGrid adapter = new CustomGrid(getActivity(),own);
         grid=(GridView)view.findViewById(R.id.grid);
         grid.setVisibility(View.VISIBLE);
         grid.setAdapter(adapter);
@@ -47,9 +44,9 @@ public class FragmentTwo  extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Toast.makeText(getActivity(), "You Clicked at " +own[+ position], Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(getActivity(),SetWall.class);
-                i.putExtra(own[+ position],"pos");
+                i.putExtra("posi",position);
+                Log.i("positionFrag", own[position]);
                 startActivity(i);
             }
         });

@@ -1,6 +1,8 @@
 package com.botty.wall;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +21,7 @@ import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
 public class CustomGrid extends BaseAdapter{
    Context context;
     String[] image;
+
     public CustomGrid(Context context, String[] GalImages) {
         this.context = context;
         this.image = GalImages;

@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.Toast;
 
 public class FragmentOne extends Fragment {
 
@@ -37,13 +36,13 @@ public class FragmentOne extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Toast.makeText(getActivity(), "You Clicked at " +cyngn[+ position], Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(getActivity(),setWall.class);
-                i.putExtra(cyngn[position],"position");
-                Log.i("pos",cyngn[position]);
+                i.putExtra("pos",position);
+                Log.i("positionFrag", cyngn[position]);
                 startActivity(i);
             }
         });
+
 		return view;
 	}
 }

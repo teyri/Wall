@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -47,13 +48,13 @@ public class SetWall extends Activity {
 
 
         Intent i = getIntent();
-        final int position = i.getIntExtra("position", 0);
+        final int position = i.getIntExtra("posi", 0);
+        Log.i("positionAct", own[position]);
         ImageAdapter adapter = new ImageAdapter(SetWall.this, own);
-        viewPager.setAdapter(adapter);
         viewPager.setOnPageChangeListener(new MyPageChangeListener());
         // displaying selected image first
-        viewPager.setCurrentItem(position);
         viewPager.setAdapter(adapter);
+        viewPager.setCurrentItem(position);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override

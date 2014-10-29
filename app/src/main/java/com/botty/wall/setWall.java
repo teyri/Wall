@@ -36,12 +36,12 @@ public class setWall extends Activity {
 
 
         Intent i = getIntent();
-        indexOfImage = i.getExtras().getInt("position");
-        Log.i("position", cyngn[indexOfImage]);
+        final int position = i.getIntExtra("pos", 0);
+        Log.i("positionAct", cyngn[position]);
         ImageAdapter adapter = new ImageAdapter(setWall.this, cyngn);
         viewPager.setOnPageChangeListener(new MyPageChangeListener());
         viewPager.setAdapter(adapter);
-        viewPager.setCurrentItem(indexOfImage);
+        viewPager.setCurrentItem(position);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
                     @Override
