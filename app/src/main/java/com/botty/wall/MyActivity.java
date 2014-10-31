@@ -164,6 +164,8 @@ public class MyActivity extends Activity {
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // The action bar home/up action should open or close the drawer.
@@ -183,5 +185,46 @@ public class MyActivity extends Activity {
             SelectItem(position);
         }
     }
+
+
+
+/*  /////////////////// Extra by Fra /////////////////// */
+
+
+boolean enable_item = true;
+
+/*
+
+select_in_drawer(0) --> reimposta tutti gli item
+select_in_drawer(1) --> setta il primo (o un altro) item come selezionato (nel metodo onDrawerStateChanged)
+
+*/
+
+public void select_in_drawer(int scelta){
+
+        if(scelta == 0){
+            
+        // per reimpostare colore e icone
+
+        int count = listview.getChildCount();
+
+        for (int i=0; i<count; i++) {
+            TextView name = (TextView)listview.getChildAt(i).findViewById(R.id.textview);
+            ImageView picture = (ImageView)listview.getChildAt(i).findViewById(R.id.imageview);
+            name.setTextColor(getResources().getColor(R.color.colore_standard));
+
+            if(i == 0){picture.setImageResource(R.drawable.picture);}
+            else if(i == 1){picture.setImageResource(R.drawable.picture);}
+            // .....
+        }
+        }else{
+// per selezionare il primo elemento della lista
+        if(enable_item){
+        TextView name = (TextView)listview.getChildAt(0).findViewById(R.id.name);
+        name.setTextColor(getResources().getColor(R.color.colore_selezionato));
+        enable_item = false;
+        }
+        }
+        }
 
 }
