@@ -11,6 +11,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
+import com.pkmmte.view.CircularImageView;
+
 public class CustomDrawerAdapter extends ArrayAdapter<DrawerItem> {
 
 	Context context;

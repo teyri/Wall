@@ -4,7 +4,7 @@
     <item
         android:color="#651fff"
         android:drawable="@drawable/fag_actived"/>
-    <item android:state_checked="false"
+    <item android:state_enabled="false"
         android:color="@android:color/black"
         android:drawable="@drawable/fag"/>
 </selector>

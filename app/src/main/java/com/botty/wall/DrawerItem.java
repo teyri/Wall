@@ -10,7 +10,7 @@ public class DrawerItem {
 		ItemName = itemName;
 		this.imgResID = imgResID;
 	}
-	
+
 	public String getItemName() {
 		return ItemName;
 	}
@@ -23,7 +23,4 @@ public class DrawerItem {
 	public void setImgResID(int imgResID) {
 		this.imgResID = imgResID;
 	}
-	
-	
-	
 }

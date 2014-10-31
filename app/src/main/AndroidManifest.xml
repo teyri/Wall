@@ -25,7 +25,7 @@
             android:name=".setWall"
             android:label="Wallpaper"
             android:parentActivityName=".MyActivity"
-            android:theme="@style/Botty.TraspActionBar">
+            android:theme="@style/Botty.TraspActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.botty.wall.MyActivity" />
@@ -34,7 +34,7 @@
             android:name=".SetWall"
             android:label="Wallpaper"
             android:parentActivityName=".MyActivity"
-            android:theme="@style/Botty.TraspActionBar">
+            android:theme="@style/Botty.TraspActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.botty.wall.MyActivity" />

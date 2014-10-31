@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/account">
+        <PreferenceScreen android:key="login"
+            android:title="@string/twitter"/>
+            <!--
+            <intent
+                android:targetClass="com.botty.wall.Twitter"
+                android:targetPackage="com.botty.wall"></intent> -->
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/ads">
+        <CheckBoxPreference
+            android:key="pref_remove"
+            android:title="@string/remove_ads"
+            android:summary="@string/pref_remove_ads_info"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

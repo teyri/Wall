@@ -4,6 +4,7 @@
     <style name="Botty" parent="android:Theme.Holo.Light">
         <!-- Customize your theme here. -->
         <item name="actionBarStyle">@style/ActionBar</item>
+        <item name="android:background">@color/material_purple</item>
     </style>
 
     <style name="Botty.RibbonTouch">
