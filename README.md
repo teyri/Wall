@@ -9,9 +9,12 @@ Wall
 
 <img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/Prevew.png">
 
+<img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/about.png">
+
 <h2><strong>The Librery used:</strong></h2>
 <a href="https://github.com/koush/UrlImageViewHelper">UrlImageViewHelper</a><br>
 <a href="https://github.com/Pkmmte/CircularImageView">CircularImageView</a><br>
+<a><b>NOTE:</b> LDrawer was removed</a>
 <a href="https://github.com/ikimuhendis/LDrawer">LDrawer</a><br>
 
 <pre>Copyright (C) 2014/2015  Ivan Botty
