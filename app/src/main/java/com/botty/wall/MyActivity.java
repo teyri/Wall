@@ -1,43 +1,40 @@
 package com.botty.wall;
 
-import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.util.Log;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 
-import com.ikimuhendis.ldrawer.ActionBarDrawerToggle;
 import com.ikimuhendis.ldrawer.DrawerArrowDrawable;
 import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
-import com.pkmmte.view.CircularImageView;
 
-import java.lang.annotation.RetentionPolicy;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.botty.wall.R.string.*;
-import static com.botty.wall.R.string.drawer_close;
-
-
-public class MyActivity extends Activity {
+public class MyActivity extends ActionBarActivity {
 
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
     ImageView imageView;
+
+    FrameLayout frameLayout;
 
     private CharSequence mDrawerTitle;
     private CharSequence mTitle;
@@ -50,13 +47,16 @@ public class MyActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
-
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getActionBar().setHomeButtonEnabled(true);
-
         // Initializing
         dataList = new ArrayList<DrawerItem>();
         mTitle = mDrawerTitle = getTitle();
@@ -65,12 +65,19 @@ public class MyActivity extends Activity {
 
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow,
                 GravityCompat.START);
+        mDrawerLayout.setStatusBarBackgroundColor(getResources().getColor(R.color.material_deep_teal_500));
 
         View headerView = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.my_header, mDrawerList, false);
         mDrawerList.addHeaderView(headerView, null, false);
-        imageView = (ImageView)findViewById(R.id.imgBack);
-        UrlImageViewHelper.setUrlDrawable(imageView, "https://lh3.googleusercontent.com/-EpioF5dFo8g/VD2msKzHv4I/AAAAAAAAe2s/JM4LVuxs-bk/w891-h593-no/10700266_546449778790343_1360469627078645120_o.jpg");
-
+        frameLayout = (FrameLayout) findViewById(R.id.social);
+        frameLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://google.com/+IvanBotty"));
+                startActivity(intent);
+            }
+        });
         // Add Drawer Item to dataList
         dataList.add(new DrawerItem("CyanogenMod", R.drawable.fag));
         dataList.add(new DrawerItem("Own Wall",R.drawable.fag));
@@ -90,8 +97,7 @@ public class MyActivity extends Activity {
                 return false;
             }
         };
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
-                drawerArrow, R.string.drawer_open,
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open,
                 R.string.drawer_close) {
 
             public void onDrawerClosed(View view) {
@@ -185,46 +191,5 @@ public class MyActivity extends Activity {
             SelectItem(position);
         }
     }
-
-
-
-/*  /////////////////// Extra by Fra /////////////////// */
-
-
-boolean enable_item = true;
-
-/*
-
-select_in_drawer(0) --> reimposta tutti gli item
-select_in_drawer(1) --> setta il primo (o un altro) item come selezionato (nel metodo onDrawerStateChanged)
-
-*/
-
-public void select_in_drawer(int scelta){
-
-        if(scelta == 0){
-            
-        // per reimpostare colore e icone
-
-        int count = listview.getChildCount();
-
-        for (int i=0; i<count; i++) {
-            TextView name = (TextView)listview.getChildAt(i).findViewById(R.id.textview);
-            ImageView picture = (ImageView)listview.getChildAt(i).findViewById(R.id.imageview);
-            name.setTextColor(getResources().getColor(R.color.colore_standard));
-
-            if(i == 0){picture.setImageResource(R.drawable.picture);}
-            else if(i == 1){picture.setImageResource(R.drawable.picture);}
-            // .....
-        }
-        }else{
-// per selezionare il primo elemento della lista
-        if(enable_item){
-        TextView name = (TextView)listview.getChildAt(0).findViewById(R.id.name);
-        name.setTextColor(getResources().getColor(R.color.colore_selezionato));
-        enable_item = false;
-        }
-        }
-        }
 
 }

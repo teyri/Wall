@@ -9,7 +9,7 @@
       android:layout_height="wrap_content"
       android:layout_alignParentLeft="true"
       android:orientation="vertical"
-
+        android:background="?android:attr/activatedBackgroundIndicator"
         >
  
               <LinearLayout
@@ -19,7 +19,7 @@
                   android:minHeight="55dp"
                   android:layout_gravity="center"
                   android:orientation="horizontal"
-                  android:paddingLeft="15dp">
+                  android:paddingLeft="5dp">
  
                   <ImageView
                       android:id="@+id/drawer_icon"
@@ -39,9 +39,10 @@
 
                       android:text="Wall"
                       android:layout_gravity="center"
-                      android:layout_marginLeft="15dp"
                       android:textStyle="normal"
-                      android:textIsSelectable="false" />
+                      android:textIsSelectable="false"
+                      android:textColor="@color/Dark_Gray"
+                      android:layout_marginLeft="5dp" />
               </LinearLayout>
 
     </LinearLayout>

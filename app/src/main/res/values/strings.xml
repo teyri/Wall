@@ -5,8 +5,6 @@
     <string name="navigation_drawer_open">Wall</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
-    <string name="account">ACCOUNT</string>
-    <string name="twitter">Twitter</string>
     <string name="ads">ADS</string>
     <string name="remove_ads">Remove ADS</string>
     <string name="pref_remove_ads_info">If you want pay me a shots :D\nDon\'t worry you can continue use it FREE !</string>

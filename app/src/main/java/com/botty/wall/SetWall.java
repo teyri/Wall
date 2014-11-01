@@ -1,10 +1,12 @@
 package com.botty.wall;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.app.WallpaperManager;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -37,6 +39,8 @@ public class SetWall extends Activity {
     private ImageButton imageButton;
     ProgressDialog myProgressDialog;
 
+
+    @TargetApi(Build.VERSION_CODES.L)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,7 +49,6 @@ public class SetWall extends Activity {
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 
         imageButton = (ImageButton)findViewById(R.id.set_wall_ribbon);
-
 
         Intent i = getIntent();
         final int position = i.getIntExtra("posi", 0);
@@ -115,4 +118,5 @@ public class SetWall extends Activity {
         myProgressDialog.setMessage("Loading...");
         myProgressDialog.show();
     }
+
 }

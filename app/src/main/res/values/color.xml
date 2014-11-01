@@ -13,4 +13,5 @@
     <color name="holo_red_dark">#ffcc0000</color>
     <color name="trasp">#30000000</color>
     <color name="material_purple">#6200ea</color>
+    <color name="material_deep_teal_400">#26a69a</color>
 </resources>

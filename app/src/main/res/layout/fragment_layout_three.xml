@@ -1,34 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:orientation="vertical">
 
-    <FrameLayout
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="250dp"
-        android:id="@+id/back">
-            <ImageView
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <FrameLayout
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:id="@+id/imgBack"
-                android:scaleType="centerCrop"/>
-            <com.pkmmte.view.CircularImageView
-                android:layout_width="95dp"
-                android:layout_height="95dp"
-                android:src="@drawable/me"
-                android:id="@+id/me"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="10dp" />
-    </FrameLayout>
+                android:layout_height="250dp"
+                android:id="@+id/back">
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imgBack"
+                    android:src="@drawable/me"
+                    android:scaleType="centerCrop" />
 
-    <TextView
-        android:id="@+id/frag3_text"
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/trasp">
+                    <com.pkmmte.view.CircularImageView
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:src="@drawable/me"
+                        android:id="@+id/me"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_margin="10dp" />
+
+                    <TextView
+                        android:id="@+id/frag3_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="by Botty"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_margin="10dp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="lol"
+                android:id="@+id/aboutME"
+                android:padding="10dp"
+                android:layout_marginBottom="100dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="by Botty" />
-
-</LinearLayout>
+        android:background="@drawable/ribbon_touch"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="10dp"
+        android:id="@+id/rate"
+        android:src="@drawable/rate"
+        android:padding="15dp"
+        android:elevation="5dp"
+        android:scaleType="centerInside" />
+</FrameLayout>

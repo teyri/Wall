@@ -17,8 +17,26 @@ import java.net.URL;
 
 
 public class setWall extends Activity {
-    private String[] cyngn = { "http://gnexushd.altervista.org/wallpapers/cyanogen/acidwashedcid.jpg", "http://gnexushd.altervista.org/im/wall_skyblue.jpg",
-            "http://gnexushd.altervista.org/im/wall_batgirl.jpg"};
+    private String[] cyngn = { "http://gnexushd.altervista.org/wallpapers/cyanogen/acidwashedcid.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/bladesplusdroplets.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/blueice_modcircle.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/decay.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/frostmaple.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/light_bursting_out.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/maplesunblaze.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/mauve.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/sunsetgrass.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/tubetangle.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_alexanderwislsperger_melbourne.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_ashersimonds_cmpatternhololight.png",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_eklipze_notquitemono.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_eklipze_technicolorstripes.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_nebkat_bokeh.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_prash_ohaimark.png",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_th_shadowchess.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_tylerhodge_blueperfection.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/winter_sunset.jpg"
+    };
 
     private int indexOfImage = 0;
 
@@ -32,8 +50,7 @@ public class setWall extends Activity {
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
 
-         imageButton = (ImageButton)findViewById(R.id.set_wall_ribbon);
-
+        imageButton = (ImageButton)findViewById(R.id.set_wall_ribbon);
 
         Intent i = getIntent();
         final int position = i.getIntExtra("pos", 0);

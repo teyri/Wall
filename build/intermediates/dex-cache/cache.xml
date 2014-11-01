@@ -26,6 +26,12 @@
         revision="20.0.0"
         sha1="d3bec8d72ee2aa86e69f66375c31f2161b7bb324"/>
     <item
+        dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/twitter4j-core-4.0.2-5e8720f4827d767627337dc32a8739ea9942da6f.jar"
+        jar="/home/ivanbotty/.gradle/caches/modules-2/files-2.1/org.twitter4j/twitter4j-core/4.0.2/6555e7c45f5db0006823731b2ddb536d481e11d1/twitter4j-core-4.0.2.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="6555e7c45f5db0006823731b2ddb536d481e11d1"/>
+    <item
         dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/classes-153bc18d5249c6ec6e17765ba7264d47ac16330b.jar"
         jar="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.0/classes.jar"
         jumboMode="false"
