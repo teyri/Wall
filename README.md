@@ -1,20 +1,22 @@
 Wall
 ====
+<img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/wall_project_github.png">
 
-<h2><strong>Some screen of app:</strong></h2>
+<h2><strong>Some screen of app on Lollipop:</strong></h2>
 
-<img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/GridView.png">
+<img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/lollipop_port.png">
 
-<img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/Drawer.png">
+<h2><strong>Some screen of app on pre-Lollipop:</strong></h2>
 
-<img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/Prevew.png">
+<img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/pre_lollipop_large_land.png">
 
-<img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/about.png">
+<img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/pre_lollipop_land.png">
 
+<a href="https://github.com/BottyIvan/Wall/tree/master/app/screen">More screen here.</a>
 <h2><strong>The Librery used:</strong></h2>
 <a href="https://github.com/koush/UrlImageViewHelper">UrlImageViewHelper</a><br>
 <a href="https://github.com/Pkmmte/CircularImageView">CircularImageView</a><br>
-<a><b>NOTE:</b> LDrawer was removed</a>
+<a><b>NOTE:</b> LDrawer was removed</a><br>
 <a href="https://github.com/ikimuhendis/LDrawer">LDrawer</a><br>
 
 <pre>Copyright (C) 2014/2015  Ivan Botty
