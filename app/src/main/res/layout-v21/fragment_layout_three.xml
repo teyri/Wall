@@ -62,12 +62,12 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ripple"
-        android:layout_gravity="bottom|right"
-        android:layout_margin="10dp"
         android:id="@+id/rate"
         android:src="@drawable/rate"
+        android:background="@drawable/ripple"
         android:padding="15dp"
+        android:scaleType="centerCrop"
         android:elevation="5dp"
-        android:scaleType="centerInside" />
+        android:layout_gravity="bottom|right"
+        android:layout_margin="15dp" />
 </FrameLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+      android:id="@+id/itemLayout"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:orientation="vertical"
+        android:background="?android:attr/activatedBackgroundIndicator"
+        >
+ 
+              <LinearLayout
+ 
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:minHeight="55dp"
+                  android:layout_gravity="center"
+                  android:orientation="horizontal"
+                  android:paddingLeft="5dp">
+ 
+                  <ImageView
+                      android:id="@+id/drawer_icon"
+                      android:layout_width="35dp"
+                      android:layout_height="35dp"
+                      android:src="@drawable/ic_launcher"
+                      android:layout_margin="5dp"
+                      android:scaleType="centerInside"
+                      android:adjustViewBounds="false"
+                      android:layout_gravity="center" />
+ 
+                  <TextView
+                      android:id="@+id/drawer_itemName"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textAppearance="?android:attr/textAppearanceLarge"
+
+                      android:text="Wall"
+                      android:layout_gravity="center"
+                      android:textStyle="normal"
+                      android:textIsSelectable="false"
+                      android:textColor="@color/Dark_Gray"
+                      android:layout_marginLeft="5dp" />
+              </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

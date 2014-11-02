@@ -22,13 +22,14 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
-    <style name="Trasp.ActionBar" parent="android:Theme.Holo.Light.DarkActionBar">
+    <style name="Trasp.ActionBar" parent="android:Theme.Holo.Light">
         <item name="android:windowActionBarOverlay">true</item>
         <item name="android:actionBarStyle">@style/ActionBar.Traslucent</item>
         <item name="android:textColorPrimary">@color/white</item>
     </style>
 
-    <style name="ActionBar.Traslucent" parent="android:Theme.Holo.Light.DarkActionBar">
+    <style name="ActionBar.Traslucent" parent="android:Widget.Holo.Light.ActionBar.Solid">
         <item name="android:background">@color/trasp</item>
+        <item name="android:icon">@android:color/transparent</item>
     </style>
 </resources>
