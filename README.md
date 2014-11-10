@@ -1,6 +1,11 @@
 Wall
 ====
-<img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/wall_project_github.png">
+<img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/wall_promo.png">
+
+<a href="https://play.google.com/store/apps/details?id=com.botty.wall">
+  <img alt="Get it on Google Play"
+       src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png" />
+</a>
 
 <h2><strong>Some screen of app on Lollipop:</strong></h2>
 
