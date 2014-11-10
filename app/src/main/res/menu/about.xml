@@ -5,6 +5,5 @@
     <item
         android:title="Suppport"
         android:id="@+id/support"
-        android:icon="@drawable/about"
         android:showAsAction="always|withText"/>
 </menu>

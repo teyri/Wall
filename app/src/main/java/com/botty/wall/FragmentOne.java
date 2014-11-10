@@ -3,10 +3,16 @@ package com.botty.wall;
 import android.app.ActivityOptions;
 import android.app.Fragment;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -14,7 +20,13 @@ import android.widget.GridView;
 
 public class FragmentOne extends Fragment {
 
-    private String[] cyngn = {  "http://gnexushd.altervista.org/wallpapers/cyanogen/acidwashedcid.jpg",
+    private String[] cyngn = {"http://gnexushd.altervista.org/wallpapers/cyanogen/hanksite.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/heresjohnny.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/hexography_blue.png",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/hexography_salmon.png",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/hextract.png",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/network.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/quartz.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/bladesplusdroplets.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/blueice_modcircle.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/decay.jpg",
@@ -32,7 +44,9 @@ public class FragmentOne extends Fragment {
             "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_prash_ohaimark.png",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_th_shadowchess.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_tylerhodge_blueperfection.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/winter_sunset.jpg"};
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/winter_sunset.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/dystopia.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/maplebokeh.jpg",};
 
     GridView grid;
 
@@ -63,4 +77,5 @@ public class FragmentOne extends Fragment {
 
 		return view;
 	}
+
 }

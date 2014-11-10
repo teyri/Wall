@@ -8,4 +8,82 @@
             android:summary="@string/pref_remove_ads_info"
             android:defaultValue="false" />
     </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Wallpaper">
+        <SwitchPreference
+            android:key="random"
+            android:title="Random Wallpaper"
+            android:summary="Change randomly the wallpaper."
+            android:defaultValue="false"/>
+        </PreferenceCategory>
+    <PreferenceCategory
+        android:title="License">
+        <PreferenceScreen
+            android:title="Cyanogen Inc."
+            android:summary="The wallpaper are from CMWallpapers.">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/CyanogenMod/android_packages_apps_CMWallpapers/"/>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:title="AndyMon"
+            android:summary="The wallpaper are from AndyMon.">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.gnexushd.com"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="About">
+        <PreferenceScreen
+            android:title="4.0-08112014_FREE"/>
+        <PreferenceScreen
+            android:title="Wall on GitHub"
+            android:summary="Look at the code.">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/BottyIvan/Wall"/>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:title="About us"
+            android:key="about_us"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Other apps">
+        <PreferenceScreen
+            android:title="Sky Clock"
+            android:summary="Watch Faces for your Watch powerd by Android Wear.">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/details?id=com.botty.skyclock"/>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:title="Blu Sky"
+            android:summary="CM11/PA/Mahdi THEME.">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/details?id=com.botty.theme.next.skyblue"/>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:title="ZEO"
+            android:summary="CM11/PA/Mahdi THEME.">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/details?id=com.botty.theme.zeo"/>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:title="NEXT BLUE"
+            android:summary="CM11/PA/Mahdi THEME.">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/details?id=com.botty.theme.next.blue"/>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:title="Holo Gray Next"
+            android:summary="CM11/PA/Mahdi THEME.">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/details?id=com.botty.theme.next"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
 </PreferenceScreen>
