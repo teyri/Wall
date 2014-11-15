@@ -6,7 +6,7 @@
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
     <string name="ads">ADS</string>
-    <string name="remove_ads">Remove ADS</string>
+    <string name="remove_ads">Remove AdMob</string>
     <string name="pref_remove_ads_info">If you want pay me a shots :D\nDon\'t worry you can continue use it FREE !</string>
     <string name="banner_ad_unit_id">ca-app-pub-3054912555945951/3640344621</string>
 </resources>

@@ -107,7 +107,7 @@ public class MyActivity extends ActionBarActivity {
 
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
-                invalidateOptionsMenu();
+                // invalidateOptionsMenu();
             }
 
             public void onDrawerOpened(View drawerView) {

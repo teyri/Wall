@@ -12,8 +12,8 @@
         android:title="Wallpaper">
         <SwitchPreference
             android:key="random"
-            android:title="Random Wallpaper"
-            android:summary="Change randomly the wallpaper."
+            android:title="Casual Wallpaper"
+            android:summary="Lets you choose the perfect backdrop for you !!"
             android:defaultValue="false"/>
         </PreferenceCategory>
     <PreferenceCategory

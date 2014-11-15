@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <GridView
-        android:numColumns="3"
+        android:numColumns="5"
         android:gravity="center"
         android:columnWidth="50dp"
         android:layout_width="fill_parent"
@@ -19,7 +19,7 @@
         android:id="@+id/random"
         android:layout_gravity="right|bottom"
         android:src="@drawable/rate"
-        android:background="@drawable/ribbon_touch"
+        android:background="@drawable/ripple"
         android:layout_margin="15dp"
         android:padding="16dp"
         android:scaleType="centerCrop"

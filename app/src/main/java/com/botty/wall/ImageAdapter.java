@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.koushikdutta.ion.Ion;
 import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
 
 import java.io.IOException;
@@ -36,9 +37,10 @@ public class ImageAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         ImageView imageView = new ImageView(context);
+
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
         UrlImageViewHelper.setUrlDrawable(imageView, image[position]);
-                ((ViewPager) container).addView(imageView, 0);
+        ((ViewPager) container).addView(imageView, 0);
         return imageView;
     }
 

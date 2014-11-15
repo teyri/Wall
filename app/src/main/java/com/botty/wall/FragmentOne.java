@@ -1,22 +1,28 @@
 package com.botty.wall;
 
+import android.annotation.TargetApi;
 import android.app.ActivityOptions;
 import android.app.Fragment;
+import android.app.ProgressDialog;
+import android.app.WallpaperManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageButton;
+import android.widget.Toast;
+
+import java.io.InputStream;
+import java.net.URL;
+import java.util.Random;
 
 public class FragmentOne extends Fragment {
 
@@ -49,8 +55,13 @@ public class FragmentOne extends Fragment {
             "http://gnexushd.altervista.org/wallpapers/cyanogen/maplebokeh.jpg",};
 
     GridView grid;
+    ProgressDialog myProgressDialog;
+    ImageButton mBtRandom;
 
-	public FragmentOne() {
+    Random rand = new Random();
+    int casual = rand.nextInt(cyngn.length-1);
+
+    public FragmentOne() {
 
 	}
 
@@ -62,20 +73,83 @@ public class FragmentOne extends Fragment {
 				false);
         final CustomGrid adapter = new CustomGrid(getActivity(), cyngn);
         grid=(GridView)view.findViewById(R.id.grid);
+        mBtRandom = (ImageButton)view.findViewById(R.id.random);
+
         grid.setVisibility(View.VISIBLE);
+
+        PreferenceManager.setDefaultValues(getActivity(), R.xml.preferences, true);
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getActivity());
+
+        if (settings.getBoolean("random", false)) {
+            mBtRandom.setVisibility(View.VISIBLE);
+        }else {
+            mBtRandom.setVisibility(View.INVISIBLE);
+        }
+
         grid.setAdapter(adapter);
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @TargetApi(Build.VERSION_CODES.L)
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Intent i = new Intent(getActivity(),setWall.class);
+                Intent i = new Intent(getActivity(), setWall.class);
                 i.putExtra("pos", position);
                 Log.i("positionFrag", cyngn[position]);
-                startActivity(i);
+                startActivity(i, ActivityOptions.makeSceneTransitionAnimation(getActivity(), view.findViewById(R.id.grid_image), "robot").toBundle());
             }
         });
 
-		return view;
+        mBtRandom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new SetWallpaperAsyncTask().execute(cyngn[casual]);
+            }
+        });
+        return view;
 	}
 
+    private class SetWallpaperAsyncTask extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... params) {
+            String URL = cyngn[casual];
+            setWallpaper(URL);
+            return "Executed";
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            myProgressDialog.dismiss();
+            Toast.makeText(getActivity(), "We think this is perfect for you :D",
+                    Toast.LENGTH_LONG).show();
+            getActivity().finish();
+        }
+
+        @Override
+        protected void onPreExecute() {
+            dialog();
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+
+        }
+
+        private void setWallpaper(String url) {
+            try {
+                WallpaperManager wpm = WallpaperManager.getInstance(getActivity());
+                InputStream ins = new URL(url).openStream();
+                wpm.setStream(ins);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void dialog(){
+        myProgressDialog = new ProgressDialog(getActivity());
+        myProgressDialog.setCancelable(false);
+        myProgressDialog.setMessage("Loading the stuff...");
+        myProgressDialog.show();
+    }
 }

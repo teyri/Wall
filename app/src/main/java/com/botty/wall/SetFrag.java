@@ -35,7 +35,7 @@ public class SetFrag extends PreferenceFragment {
             public boolean onPreferenceChange(final Preference preference,
                                               final Object newValue)
             {
-                boolean condition = false;
+                boolean condition = true;
                 Toast.makeText(getActivity(), "Not Ready Yet !!", Toast.LENGTH_SHORT).show();
                 // set condition true or false here according to your needs.
                 buyPref.setChecked(condition);
@@ -50,12 +50,12 @@ public class SetFrag extends PreferenceFragment {
         switchPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
-                boolean switchr = false;
+                boolean switchr = true;
                 switchPreference.setChecked(switchr);
                 SharedPreferences.Editor edit =preference.getEditor();
                 edit.putBoolean("random",switchr);
                 edit.commit();
-                Toast.makeText(getActivity(),"I hope soon !!",Toast.LENGTH_SHORT).show();
+                getActivity().finish();
                 return false;
             }
         });

@@ -19,7 +19,7 @@
         android:id="@+id/random"
         android:layout_gravity="right|bottom"
         android:src="@drawable/rate"
-        android:background="@drawable/ribbon_touch"
+        android:background="@drawable/ripple"
         android:layout_margin="15dp"
         android:padding="16dp"
         android:scaleType="centerCrop"

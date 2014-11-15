@@ -1,10 +1,11 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:transitionName="robot">
 
     <GridView
-        android:numColumns="3"
+        android:numColumns="2"
         android:gravity="center"
         android:columnWidth="50dp"
         android:layout_width="fill_parent"
@@ -19,9 +20,10 @@
         android:id="@+id/random"
         android:layout_gravity="right|bottom"
         android:src="@drawable/rate"
-        android:background="@drawable/ribbon_touch"
+        android:background="@drawable/ripple"
         android:layout_margin="15dp"
         android:padding="16dp"
         android:scaleType="centerCrop"
         android:visibility="invisible" />
+
 </FrameLayout>

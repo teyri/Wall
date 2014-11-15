@@ -1,12 +1,15 @@
 package com.botty.wall;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.app.WallpaperManager;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.transition.Explode;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
@@ -14,7 +17,6 @@ import android.widget.Toast;
 
 import java.io.InputStream;
 import java.net.URL;
-
 
 public class setWall extends Activity {
     private String[] cyngn = { "http://gnexushd.altervista.org/wallpapers/cyanogen/hanksite.jpg",
@@ -49,33 +51,38 @@ public class setWall extends Activity {
     private int indexOfImage = 0;
 
     private ImageButton imageButton;
+    private ViewPager viewPager;
     ProgressDialog myProgressDialog;
 
+    @TargetApi(Build.VERSION_CODES.L)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_wall);
+        getWindow().setExitTransition(new Explode());
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        viewPager = (ViewPager) findViewById(R.id.pager);
 
-        imageButton = (ImageButton)findViewById(R.id.set_wall_ribbon);
+        imageButton = (ImageButton) findViewById(R.id.set_wall_ribbon);
 
-        Intent i = getIntent();
+        final Intent i = getIntent();
         final int position = i.getIntExtra("pos", 0);
         Log.i("positionAct", cyngn[position]);
+
         ImageAdapter adapter = new ImageAdapter(setWall.this, cyngn);
         viewPager.setOnPageChangeListener(new MyPageChangeListener());
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(position);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        new SetWallpaperAsyncTask().execute(cyngn[indexOfImage]);
-                    }
-                });
+            @Override
+            public void onClick(View view) {
+                new SetWallpaperAsyncTask().execute(cyngn[indexOfImage]);
+            }
+        });
 
-        }
+    }
+
     private class MyPageChangeListener extends
             ViewPager.SimpleOnPageChangeListener {
         @Override
