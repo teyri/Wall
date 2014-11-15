@@ -14,11 +14,29 @@
         revision="20.0.0"
         sha1="95fd37732ec852e99f07eeb516a3650172f1d136"/>
     <item
+        dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/androidasync-2.0.0-ad6501c1b464d3265cc87efccd91ad2fe68b9013.jar"
+        jar="/home/ivanbotty/.gradle/caches/modules-2/files-2.1/com.koushikdutta.async/androidasync/2.0.0/7b07bbed94717bfc4ed2c5e49baacbe1d46fca39/androidasync-2.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="7b07bbed94717bfc4ed2c5e49baacbe1d46fca39"/>
+    <item
+        dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/ion-2.0.0-f978ff1a2f31d694c3f41e3233f0ec5cb31f47dc.jar"
+        jar="/home/ivanbotty/.gradle/caches/modules-2/files-2.1/com.koushikdutta.ion/ion/2.0.0/9e93d64dc384a162a53d363678cb833ac61fefd4/ion-2.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9e93d64dc384a162a53d363678cb833ac61fefd4"/>
+    <item
         dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/classes-3ecad163667893c3fbd37159f5cdf29c92f84a66.jar"
         jar="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="686344a780033e4ba22b926cd225f8d4941247e6"/>
+    <item
+        dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/gson-2.3-e58d2ff48318583c657445a231f9eaad8d08ad47.jar"
+        jar="/home/ivanbotty/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce"/>
     <item
         dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-31507a68e55838c1429b85deca2d139671b4d462.jar"
         jar="/home/ivanbotty/Documenti/android-studio/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"

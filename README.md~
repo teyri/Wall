@@ -1,6 +1,14 @@
 Wall
 ====
-<img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/wall_project_github.png">
+<img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/wall_promo.png">
+<<<<<<< HEAD
+=======
+
+<a href="https://play.google.com/store/apps/details?id=com.botty.wall">
+  <img alt="Get it on Google Play"
+       src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png" />
+</a>
+>>>>>>> 22c94e30588179c97a7a00453d0ef3853d724284
 
 <h2><strong>Some screen of app on Lollipop:</strong></h2>
 
@@ -12,7 +20,7 @@ Wall
 
 <img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/pre_lollipop_land.png">
 
-<a href="https://github.com/bottyivan/Wall/app/screen">More screen here.</a>
+<a href="https://github.com/BottyIvan/Wall/tree/master/app/screen">More screen here.</a>
 <h2><strong>The Librery used:</strong></h2>
 <a href="https://github.com/koush/UrlImageViewHelper">UrlImageViewHelper</a><br>
 <a href="https://github.com/Pkmmte/CircularImageView">CircularImageView</a><br>
