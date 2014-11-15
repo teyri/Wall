@@ -1,6 +1,6 @@
 Wall
 ====
-<img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/wall_project_github.png">
+<img style="width: 80%" src="https://raw.githubusercontent.com/BottyIvan/Wall/master/app/screen/wall_promo.png">
 
 <h2><strong>Some screen of app on Lollipop:</strong></h2>
 
