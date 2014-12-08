@@ -8,7 +8,7 @@ android {
         applicationId "com.botty.wall"
         minSdkVersion 15
         targetSdkVersion 21
-        versionCode 13
+        versionCode 14
         versionName "4.1-09122014_FREE"
     }
 }
