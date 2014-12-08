@@ -33,7 +33,7 @@ public class Buy extends Activity implements BillingProcessor.IBillingHandler {
     private boolean readyToPurchase = false;
     private static final String LOG_TAG = "BottyShop";
     private static final String PRODUCT_ID = "removeads";
-    private static final String LICENSE_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsyx2xItfmUfkufFGgXegN/Z35ElVXuyTW0GPB1trFOJlkArKYUHV5SoOAnMVOLX6IL4if/EGA/Uz7Gw1uwVNZTSvgu9A6HlVvKcotD8sGdh5nujUSi9IH4KoL2yXApYzm0icNFeMSVKjl/9B2dFq+paDx/sZT+Ys2HgnxpNpmM4+ALAdJ7eAcK7BYMvaibURL1XDnm57nZBK+hVSSAHxaO2ZrA414chALCVMAPZ/aLAAwtYuLVsOwWRvD+B3cJxhdwjbnVVuVkHerB9+DdxgfPGqbv9VrJLhsS+TXZBi8fihNtg12HBypbCMOojJ+FwMaqmL2Z5cwqQDOLMgS/jomwIDAQAB";
+    private static final String LICENSE_KEY = "YOUR LICENSE KEY FOR THIS APPLICATION";
 
     @SuppressLint("ResourceAsColor")
     @Override

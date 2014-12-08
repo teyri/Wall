@@ -21,6 +21,7 @@ Wall
 <h2><strong>The Librery used:</strong></h2>
 <a href="https://github.com/koush/UrlImageViewHelper">UrlImageViewHelper</a><br>
 <a href="https://github.com/Pkmmte/CircularImageView">CircularImageView</a><br>
+<a href="https://github.com/anjlab/android-inapp-billing-v3">android-inapp-billing-v3</a><br>
 <a><b>NOTE:</b> LDrawer was removed</a><br>
 <a href="https://github.com/ikimuhendis/LDrawer">LDrawer</a><br>
 
