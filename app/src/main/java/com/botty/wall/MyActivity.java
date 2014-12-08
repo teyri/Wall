@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.support.v4.view.GravityCompat;
@@ -15,6 +16,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,6 +34,7 @@ import com.botty.wall.Fragment.SetFrag;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,6 +72,15 @@ public class MyActivity extends ActionBarActivity {
             frameLayout.setPadding(0,0,0,0);
         }else {
             frameLayout.setPadding(0,0,0,150);
+        }
+
+        if (settings.getBoolean("dl_wall", false)) {
+            if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
+                Log.d("MyApp", "No SDCARD");
+            } else {
+                File directory = new File(Environment.getExternalStorageDirectory()+File.separator+"Dl_Wall_app");
+                directory.mkdirs();
+            }
         }
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()

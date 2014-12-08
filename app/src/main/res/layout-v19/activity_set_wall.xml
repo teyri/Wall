@@ -11,6 +11,11 @@
         tools:context="com.botty.wall"
         />
 
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:background="@color/trasp"/>
+
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -96,10 +96,20 @@ public class FragmentOne extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Intent i = new Intent(getActivity(), setWall.class);
-                i.putExtra("pos", position);
-                Log.i("positionFrag", cyngn[position]);
-                startActivity(i, ActivityOptions.makeSceneTransitionAnimation(getActivity(), view.findViewById(R.id.grid_image), "robot").toBundle());
+                // Check if we're running on Android 5.0 or higher
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    // Call some material design APIs here
+                    Intent i = new Intent(getActivity(), setWall.class);
+                    i.putExtra("pos", position);
+                    Log.i("positionFrag", cyngn[position]);
+                    startActivity(i, ActivityOptions.makeSceneTransitionAnimation(getActivity(), view.findViewById(R.id.grid_image), "robot").toBundle());
+                } else {
+                    // Implement this feature without material design
+                    Intent i = new Intent(getActivity(), setWall.class);
+                    i.putExtra("pos", position);
+                    Log.i("positionFrag", cyngn[position]);
+                    startActivity(i);
+                }
             }
         });
 

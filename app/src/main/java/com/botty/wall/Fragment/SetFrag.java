@@ -21,8 +21,6 @@ import com.botty.wall.R;
  */
 public class SetFrag extends PreferenceFragment  implements BillingProcessor.IBillingHandler {
 
-  //  IabHelper mHelper;
-
     boolean purchased = false;
     BillingProcessor bp;
     CheckBoxPreference buyPref;
@@ -109,6 +107,19 @@ public class SetFrag extends PreferenceFragment  implements BillingProcessor.IBi
             }
         });
 
+        final SwitchPreference dl_wall = (SwitchPreference) findPreference("dl_wall");
+        dl_wall.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                boolean dl_wall_ = true;
+                switchPreference.setChecked(dl_wall_);
+                SharedPreferences.Editor edit =preference.getEditor();
+                edit.putBoolean("dl_wall",dl_wall_);
+                edit.commit();
+                getActivity().finish();
+                return false;
+            }
+        });
         final PreferenceScreen screen = (PreferenceScreen) findPreference("about_us");
         screen.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override

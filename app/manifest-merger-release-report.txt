@@ -1,0 +1,154 @@
+-- Merging decision tree log ---
+manifest
+ADDED from AndroidManifest.xml:2:1
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
+	package
+		ADDED from AndroidManifest.xml:3:5
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:versionName
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:versionCode
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:5:5
+	android:name
+		ADDED from AndroidManifest.xml:5:22
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from AndroidManifest.xml:6:5
+	android:name
+		ADDED from AndroidManifest.xml:6:22
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from AndroidManifest.xml:7:5
+	android:name
+		ADDED from AndroidManifest.xml:7:22
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from AndroidManifest.xml:8:5
+	android:name
+		ADDED from AndroidManifest.xml:8:22
+uses-permission#android.permission.INTERNET
+ADDED from AndroidManifest.xml:9:5
+	android:name
+		ADDED from AndroidManifest.xml:9:22
+uses-permission#android.permission.SET_WALLPAPER
+ADDED from AndroidManifest.xml:10:5
+	android:name
+		ADDED from AndroidManifest.xml:10:22
+uses-permission#com.android.vending.BILLING
+ADDED from AndroidManifest.xml:11:5
+MERGED from com.anjlab.android.iab.v3:library:1.0.17:11:5
+	android:name
+		ADDED from AndroidManifest.xml:11:22
+application
+ADDED from AndroidManifest.xml:13:5
+MERGED from com.android.support:support-v4:21.0.0:16:5
+MERGED from com.android.support:appcompat-v7:21.0.0:16:5
+MERGED from com.android.support:support-v4:21.0.0:16:5
+MERGED from com.pkmmte.view:circularimageview:1.1:11:5
+MERGED from com.google.android.gms:play-services:6.1.71:16:5
+MERGED from com.android.support:support-v4:21.0.0:16:5
+MERGED from com.anjlab.android.iab.v3:library:1.0.17:13:5
+	android:label
+		ADDED from AndroidManifest.xml:16:9
+	android:allowBackup
+		ADDED from AndroidManifest.xml:14:9
+	android:icon
+		ADDED from AndroidManifest.xml:15:9
+	android:theme
+		ADDED from AndroidManifest.xml:17:9
+meta-data#com.google.android.gms.version
+ADDED from AndroidManifest.xml:20:9
+	android:name
+		ADDED from AndroidManifest.xml:21:13
+	android:value
+		ADDED from AndroidManifest.xml:22:13
+activity#com.botty.wall.MyActivity
+ADDED from AndroidManifest.xml:24:9
+	android:label
+		ADDED from AndroidManifest.xml:26:13
+	android:uiOptions
+		ADDED from AndroidManifest.xml:27:13
+	android:name
+		ADDED from AndroidManifest.xml:25:13
+intent-filter#android.intent.action.MAIN+android.intent.action.SET_WALLPAPER+android.intent.category.DEFAULT+android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:28:13
+action#android.intent.action.MAIN
+ADDED from AndroidManifest.xml:29:17
+	android:name
+		ADDED from AndroidManifest.xml:29:25
+action#android.intent.action.SET_WALLPAPER
+ADDED from AndroidManifest.xml:30:17
+	android:name
+		ADDED from AndroidManifest.xml:30:25
+category#android.intent.category.DEFAULT
+ADDED from AndroidManifest.xml:32:17
+	android:name
+		ADDED from AndroidManifest.xml:32:27
+category#android.intent.category.LAUNCHER
+ADDED from AndroidManifest.xml:33:17
+	android:name
+		ADDED from AndroidManifest.xml:33:27
+activity#com.botty.wall.Activites.setWall
+ADDED from AndroidManifest.xml:36:9
+	android:label
+		ADDED from AndroidManifest.xml:38:13
+	android:theme
+		ADDED from AndroidManifest.xml:40:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:39:13
+	android:name
+		ADDED from AndroidManifest.xml:37:13
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from AndroidManifest.xml:41:13
+	android:name
+		ADDED from AndroidManifest.xml:42:17
+	android:value
+		ADDED from AndroidManifest.xml:43:17
+activity#com.botty.wall.Activites.SetWall
+ADDED from AndroidManifest.xml:45:9
+	android:label
+		ADDED from AndroidManifest.xml:47:13
+	android:theme
+		ADDED from AndroidManifest.xml:49:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:48:13
+	android:name
+		ADDED from AndroidManifest.xml:46:13
+activity#com.google.android.gms.ads.AdActivity
+ADDED from AndroidManifest.xml:55:9
+	android:configChanges
+		ADDED from AndroidManifest.xml:57:13
+	android:theme
+		ADDED from AndroidManifest.xml:58:13
+	android:name
+		ADDED from AndroidManifest.xml:56:13
+activity#com.botty.wall.Activites.Buy
+ADDED from AndroidManifest.xml:59:9
+	android:screenOrientation
+		ADDED from AndroidManifest.xml:64:13
+	android:label
+		ADDED from AndroidManifest.xml:61:13
+	android:theme
+		ADDED from AndroidManifest.xml:63:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:62:13
+	android:name
+		ADDED from AndroidManifest.xml:60:13
+uses-sdk
+INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
+MERGED from com.android.support:support-v4:21.0.0:15:5
+MERGED from com.android.support:appcompat-v7:21.0.0:15:5
+MERGED from com.android.support:support-v4:21.0.0:15:5
+MERGED from com.pkmmte.view:circularimageview:1.1:7:5
+MERGED from com.google.android.gms:play-services:6.1.71:15:5
+MERGED from com.android.support:support-v4:21.0.0:15:5
+MERGED from com.anjlab.android.iab.v3:library:1.0.17:7:5
+	android:targetSdkVersion
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
+	android:minSdkVersion
+		INJECTED from AndroidManifest.xml:0:0
+		INJECTED from AndroidManifest.xml:0:0
