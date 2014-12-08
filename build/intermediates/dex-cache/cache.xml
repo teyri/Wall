@@ -38,6 +38,12 @@
         revision="20.0.0"
         sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce"/>
     <item
+        dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/classes-68537793bb18eede59c0c6bac478ade628a88eaf.jar"
+        jar="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/exploded-aar/com.anjlab.android.iab.v3/library/1.0.17/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="891c4a64535280dd5ed00c89f5cdcdc5201f160e"/>
+    <item
         dex="/home/ivanbotty/AndroidStudioProjects/Wall/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-31507a68e55838c1429b85deca2d139671b4d462.jar"
         jar="/home/ivanbotty/Documenti/android-studio/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
         jumboMode="false"

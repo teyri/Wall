@@ -9,7 +9,8 @@
             android:defaultValue="false" />
     </PreferenceCategory>
     <PreferenceCategory
-        android:title="Wallpaper">
+        android:title="Wallpaper"
+        android:dependency="pref_remove">
         <SwitchPreference
             android:key="random"
             android:title="Casual Wallpaper"
@@ -18,25 +19,46 @@
         </PreferenceCategory>
     <PreferenceCategory
         android:title="License">
+            <PreferenceScreen
+                android:title="Cyanogen Inc."
+                android:summary="The wallpaper are from CMWallpapers.">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://github.com/CyanogenMod/android_packages_apps_CMWallpapers/"/>
+            </PreferenceScreen>
+            <PreferenceScreen
+                android:title="AndyMon"
+                android:summary="The wallpaper are from AndyMon.">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="http://www.gnexushd.com"/>
+            </PreferenceScreen>
+            <PreferenceScreen
+                android:title="UrlImageViewHelper"
+                android:summary="Android library that sets an ImageView's contents from a url. Manages image downloading, caching, and makes your coffee too. ">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://github.com/koush/UrlImageViewHelper"/>
+            </PreferenceScreen>
+            <PreferenceScreen
+                android:title="CircularImageView"
+                android:summary="Custom view for circular images in Android while maintaining the best draw performance.">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://github.com/Pkmmte/CircularImageView"/>
+            </PreferenceScreen>
         <PreferenceScreen
-            android:title="Cyanogen Inc."
-            android:summary="The wallpaper are from CMWallpapers.">
+            android:title="android-inapp-billing-v3"
+            android:summary="A lightweight implementation of Android In-app Billing Version 3.">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://github.com/CyanogenMod/android_packages_apps_CMWallpapers/"/>
-        </PreferenceScreen>
-        <PreferenceScreen
-            android:title="AndyMon"
-            android:summary="The wallpaper are from AndyMon.">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="http://www.gnexushd.com"/>
+                android:data="https://github.com/anjlab/android-inapp-billing-v3"/>
         </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory
         android:title="About">
         <PreferenceScreen
-            android:title="4.0-08112014_FREE"/>
+            android:title="4.0.1-08122014_FREE"/>
         <PreferenceScreen
             android:title="Wall on GitHub"
             android:summary="Look at the code.">

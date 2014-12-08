@@ -8,12 +8,13 @@
         android:layout_width="fill_parent"
         android:layout_height="200dp"
         android:id="@+id/back">
+
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:id="@+id/imgBack"
             android:scaleType="centerCrop"
-            android:src="@drawable/me"
+            android:src="@drawable/bkg_12_dec"
             android:layout_gravity="center" />
 
         <FrameLayout
@@ -27,7 +28,7 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/imageView"
+            android:id="@+id/wallLayout"
             android:layout_gravity="left|bottom"
             android:src="@drawable/gplus_white"
             android:layout_margin="20dp" />

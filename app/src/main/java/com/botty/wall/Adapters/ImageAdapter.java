@@ -1,4 +1,4 @@
-package com.botty.wall;
+package com.botty.wall.Adapters;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
@@ -19,7 +19,7 @@ public class ImageAdapter extends PagerAdapter {
     Context context;
     String[] image;
 
-    ImageAdapter(Context context, String[] GalImages) {
+    public ImageAdapter(Context context, String[] GalImages) {
         this.context = context;
         this.image = GalImages;
     }

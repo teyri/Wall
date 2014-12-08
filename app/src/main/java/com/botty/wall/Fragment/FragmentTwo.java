@@ -1,4 +1,4 @@
-package com.botty.wall;
+package com.botty.wall.Fragment;
 
 import android.annotation.TargetApi;
 import android.app.ActivityOptions;
@@ -20,58 +20,46 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.botty.wall.Adapters.CustomGrid;
+import com.botty.wall.R;
+import com.botty.wall.Activites.SetWall;
+
 import java.io.InputStream;
 import java.net.URL;
 import java.util.Random;
 
-public class FragmentOne extends Fragment {
+public class FragmentTwo  extends Fragment {
 
-    private String[] cyngn = {"http://gnexushd.altervista.org/wallpapers/cyanogen/hanksite.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/heresjohnny.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/hexography_blue.png",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/hexography_salmon.png",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/hextract.png",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/network.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/quartz.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/bladesplusdroplets.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/blueice_modcircle.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/decay.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/frostmaple.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/light_bursting_out.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/maplesunblaze.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/mauve.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/sunsetgrass.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/tubetangle.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_alexanderwislsperger_melbourne.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_ashersimonds_cmpatternhololight.png",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_eklipze_notquitemono.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_eklipze_technicolorstripes.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_nebkat_bokeh.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_prash_ohaimark.png",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_th_shadowchess.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_tylerhodge_blueperfection.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/winter_sunset.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/dystopia.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/maplebokeh.jpg",};
+    private String[] own = { "http://gnexushd.altervista.org/wallpapers/gnexushd/wallpaper_batman_beyod.jpg",
+    "http://gnexushd.altervista.org/wallpapers/gnexushd/wallpaper_batman_logo2.jpg",
+    "http://gnexushd.altervista.org/wallpapers/gnexushd/wallpaper_cm11_leaks.png",
+    "http://gnexushd.altervista.org/wallpapers/gnexushd/wallpaper_cm_wall.png",
+    "http://gnexushd.altervista.org/wallpapers/gnexushd/wallpaper_eva1.jpg",
+    "http://gnexushd.altervista.org/wallpapers/gnexushd/wallpaper_kitkat.jpg",
+    "http://gnexushd.altervista.org/wallpapers/gnexushd/wallpaper_nexus.jpg",
+    "http://www.gnexushd.altervista.org/im/zeo_bg_wall_dark.jpg",
+    "http://gnexushd.altervista.org/im/zeo_bg_wall.jpg",
+    "http://gnexushd.altervista.org/im/wall_skyblue.jpg",
+    "http://gnexushd.altervista.org/im/wall_batgirl.jpg"};
 
     GridView grid;
     ProgressDialog myProgressDialog;
     ImageButton mBtRandom;
 
     Random rand = new Random();
-    int casual = rand.nextInt(cyngn.length-1);
+    int casual = rand.nextInt(own.length-1);
 
-    public FragmentOne() {
+    public FragmentTwo() {
 
-	}
+    }
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
-		View view = inflater.inflate(R.layout.activity_wall, container,
-				false);
-        final CustomGrid adapter = new CustomGrid(getActivity(), cyngn);
+        View view = inflater.inflate(R.layout.activity_wall, container,
+                false);
+        final CustomGrid adapter = new CustomGrid(getActivity(), own);
         grid=(GridView)view.findViewById(R.id.grid);
         mBtRandom = (ImageButton)view.findViewById(R.id.random);
 
@@ -92,9 +80,9 @@ public class FragmentOne extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                Intent i = new Intent(getActivity(), setWall.class);
-                i.putExtra("pos", position);
-                Log.i("positionFrag", cyngn[position]);
+                Intent i = new Intent(getActivity(), SetWall.class);
+                i.putExtra("posi",position);
+                Log.i("positionFrag", own[position]);
                 startActivity(i, ActivityOptions.makeSceneTransitionAnimation(getActivity(), view.findViewById(R.id.grid_image), "robot").toBundle());
             }
         });
@@ -102,17 +90,17 @@ public class FragmentOne extends Fragment {
         mBtRandom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new SetWallpaperAsyncTask().execute(cyngn[casual]);
+                new SetWallpaperAsyncTask().execute(own[casual]);
             }
         });
         return view;
-	}
+    }
 
     private class SetWallpaperAsyncTask extends AsyncTask<String, Void, String> {
 
         @Override
         protected String doInBackground(String... params) {
-            String URL = cyngn[casual];
+            String URL = own[casual];
             setWallpaper(URL);
             return "Executed";
         }

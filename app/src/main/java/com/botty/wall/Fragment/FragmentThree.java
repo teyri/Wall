@@ -1,4 +1,4 @@
-package com.botty.wall;
+package com.botty.wall.Fragment;
 
 import android.app.ActionBar;
 import android.app.Fragment;
@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.botty.wall.R;
 import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
 import com.pkmmte.view.CircularImageView;
 

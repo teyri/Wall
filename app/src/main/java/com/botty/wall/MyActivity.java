@@ -24,11 +24,16 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.botty.wall.Adapters.CustomDrawerAdapter;
+import com.botty.wall.Adapters.DrawerItem;
+import com.botty.wall.Fragment.FragmentOne;
+import com.botty.wall.Fragment.FragmentTwo;
+import com.botty.wall.Fragment.SetFrag;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyActivity extends ActionBarActivity {
 

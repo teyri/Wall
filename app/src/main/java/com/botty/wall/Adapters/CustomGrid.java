@@ -1,4 +1,4 @@
-package com.botty.wall;
+package com.botty.wall.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
+import com.botty.wall.R;
 import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
 
 /**

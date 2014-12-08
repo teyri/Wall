@@ -1,4 +1,4 @@
-package com.botty.wall;
+package com.botty.wall.Activites;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -13,6 +13,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.botty.wall.Adapters.ImageAdapter;
+import com.botty.wall.R;
 
 import java.io.InputStream;
 import java.net.URL;

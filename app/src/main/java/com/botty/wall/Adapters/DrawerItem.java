@@ -1,4 +1,4 @@
-package com.botty.wall;
+package com.botty.wall.Adapters;
 
 public class DrawerItem {
 

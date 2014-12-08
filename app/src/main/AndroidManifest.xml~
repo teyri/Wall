@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.botty.wall.Activites.setWall"
+            android:name=".setWall"
             android:label="Wallpaper"
             android:parentActivityName=".MyActivity"
             android:theme="@style/Trasp.ActionBar" >
@@ -41,7 +41,7 @@
                 android:value="com.botty.wall.MyActivity" />
         </activity>
         <activity
-            android:name="com.botty.wall.Activites.SetWall"
+            android:name=".SetWall"
             android:label="Wallpaper"
             android:parentActivityName=".MyActivity"
             android:theme="@style/Trasp.ActionBar" >
@@ -58,8 +58,7 @@
             android:name=".Activites.Buy"
             android:label="@string/title_activity_buy"
             android:parentActivityName=".MyActivity"
-            android:theme="@style/Botty"
-            android:screenOrientation="nosensor">
+            android:theme="@style/Botty">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.botty.wall.MyActivity" />
