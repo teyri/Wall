@@ -43,7 +43,7 @@
                 android:value="com.botty.wall.MyActivity" />
         </activity>
         <activity
-            android:name="com.botty.wall.Activites.SetWall"
+            android:name="com.botty.wall.Activites.SetWall2"
             android:label="Wallpaper"
             android:parentActivityName=".MyActivity"
             android:theme="@style/Trasp.ActionBar" >

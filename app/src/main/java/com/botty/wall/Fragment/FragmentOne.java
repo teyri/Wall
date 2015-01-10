@@ -23,6 +23,8 @@ import android.widget.Toast;
 import com.botty.wall.Adapters.CustomGrid;
 import com.botty.wall.R;
 import com.botty.wall.Activites.setWall;
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -46,6 +48,7 @@ public class FragmentOne extends Fragment {
             "http://gnexushd.altervista.org/wallpapers/cyanogen/mauve.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/sunsetgrass.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/tubetangle.jpg",
+            "http://gnexushd.altervista.org/wallpapers/gnexushd/wallpaper_eklipze_cheshireyellow.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_alexanderwislsperger_melbourne.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_ashersimonds_cmpatternhololight.png",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_eklipze_notquitemono.jpg",
@@ -56,7 +59,10 @@ public class FragmentOne extends Fragment {
             "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_tylerhodge_blueperfection.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/winter_sunset.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/dystopia.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/maplebokeh.jpg",};
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/maplebokeh.jpg",
+            "http://gnexushd.altervista.org/wallpapers/gnexushd/barnsley_silhouette.jpg",
+            "http://gnexushd.altervista.org/wallpapers/gnexushd/theicestorm.jpg",
+            "http://gnexushd.altervista.org/wallpapers/gnexushd/wallpaper_ashersimonds_cmpatternholodark.png"};
 
     GridView grid;
     ProgressDialog myProgressDialog;
@@ -78,6 +84,7 @@ public class FragmentOne extends Fragment {
         final CustomGrid adapter = new CustomGrid(getActivity(), cyngn);
         grid=(GridView)view.findViewById(R.id.grid);
         mBtRandom = (ImageButton)view.findViewById(R.id.random);
+        YoYo.with(Techniques.SlideInUp).playOn(mBtRandom);
 
         grid.setVisibility(View.VISIBLE);
 
@@ -92,7 +99,6 @@ public class FragmentOne extends Fragment {
 
         grid.setAdapter(adapter);
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @TargetApi(Build.VERSION_CODES.L)
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
