@@ -70,7 +70,7 @@
     <PreferenceCategory
         android:title="About">
         <PreferenceScreen
-            android:title="4.1-10012015_FREE"/>
+            android:title="4.1-28012015_FREE"/>
         <PreferenceScreen
             android:title="Wall on GitHub"
             android:summary="Look at the code.">

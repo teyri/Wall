@@ -32,7 +32,12 @@ import java.util.Random;
 
 public class FragmentOne extends Fragment {
 
-    private String[] cyngn = {"http://gnexushd.altervista.org/wallpapers/cyanogen/hanksite.jpg",
+    private String[] cyngn = {"http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_slantstyle.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_iconoclast.png",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_headcase.png",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_harmony.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_arc.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/hanksite.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/heresjohnny.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/hexography_blue.png",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/hexography_salmon.png",
