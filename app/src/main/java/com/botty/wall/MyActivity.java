@@ -15,6 +15,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -33,12 +34,18 @@ import com.botty.wall.Fragment.FragmentTwo;
 import com.botty.wall.Fragment.SetFrag;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.mikepenz.iconics.typeface.FontAwesome;
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SectionDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyActivity extends ActionBarActivity {
+public class MyActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
@@ -52,6 +59,7 @@ public class MyActivity extends ActionBarActivity {
     CustomDrawerAdapter adapter;
 
     List<DrawerItem> dataList;
+    private Drawer.Result drawerMaterial = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,131 +94,30 @@ public class MyActivity extends ActionBarActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        // Initializing
-        dataList = new ArrayList<DrawerItem>();
-        mTitle = mDrawerTitle = getTitle();
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerList = (ListView) findViewById(R.id.left_drawer);
-
-        mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow,
-                GravityCompat.START);
-        mDrawerLayout.setStatusBarBackgroundColor(getResources().getColor(R.color.material_deep_teal_500));
-
-        View headerView = ((LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.my_header, mDrawerList, false);
-        mDrawerList.addHeaderView(headerView, null, false);
-        frameLayout = (FrameLayout) findViewById(R.id.social);
-        frameLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://google.com/+IvanBotty"));
-                startActivity(intent);
-            }
-        });
-        // Add Drawer Item to dataList
-        dataList.add(new DrawerItem("CyanogenMod", R.drawable.fag));
-        dataList.add(new DrawerItem("Own Wall",R.drawable.fag));
-        dataList.add(new DrawerItem("Setting",R.drawable.set));
-
-        adapter = new CustomDrawerAdapter(this, R.layout.custom_drawer_item,
-                dataList);
-
-        mDrawerList.setAdapter(adapter);
-
-        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.drawer_open,
-                R.string.drawer_close) {
-
-            public void onDrawerClosed(View view) {
-                super.onDrawerClosed(view);
-                // invalidateOptionsMenu();
-            }
-
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
-                invalidateOptionsMenu();
-            }
-        };
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
-
-        if (savedInstanceState == null) {
-            SelectItem(1);
-        }
-    }
-
-    public void SelectItem(int possition) {
-
-        Fragment fragment = null;
-        Bundle args = new Bundle();
-        switch (possition) {
-            case 0:
-                return;
-            case 1:
-                fragment = new FragmentOne();
-                break;
-            case 2:
-                fragment = new FragmentTwo();
-                break;
-            case 3:
-                fragment = new SetFrag();
-                break;
-            default:
-                return;
-        }
-
-        fragment.setArguments(args);
-        FragmentManager frgManager = getFragmentManager();
-        frgManager.beginTransaction().replace(R.id.content_frame, fragment)
-                .commit();
-
-        mDrawerList.setItemChecked(possition, true);
-        mDrawerLayout.closeDrawer(mDrawerList);
+        drawerMaterial = new Drawer()
+                .withActivity(this)
+                .withToolbar(toolbar)
+                .withActionBarDrawerToggle(true)
+                .withHeader(R.layout.my_header)
+                .addDrawerItems(
+                        new PrimaryDrawerItem().withName("CyanogeMod").withIcon(FontAwesome.Icon.faw_download),
+                        new PrimaryDrawerItem().withName("ParanoidAndroid").withIcon(FontAwesome.Icon.faw_circle_o),
+                        new PrimaryDrawerItem().withName("Own Wall").withIcon(FontAwesome.Icon.faw_money),
+                        new SectionDrawerItem().withName("Some Stuff"),
+                        new SecondaryDrawerItem().withName("Donate").withIcon(FontAwesome.Icon.faw_info),
+                        new SecondaryDrawerItem().withName("Setting").withIcon(FontAwesome.Icon.faw_info),
+                        new SecondaryDrawerItem().withName("About App").withIcon(FontAwesome.Icon.faw_info)
+        )
+                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id, IDrawerItem drawerItem) {
+                    }
+                })
+                .withSelectedItem(0)
+                .build();
 
     }
-
-    @Override
-    public void setTitle(CharSequence title) {
-        mTitle = title;
-        getActionBar().setTitle(mTitle);
-    }
-
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        // Sync the toggle state after onRestoreInstanceState has occurred.
-        mDrawerToggle.syncState();
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        // Pass any configuration change to the drawer toggles
-        mDrawerToggle.onConfigurationChanged(newConfig);
-    }
-
-
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // The action bar home/up action should open or close the drawer.
-        // ActionBarDrawerToggle will take care of this.
-        if (mDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-
-        return false;
-    }
-
-    private class DrawerItemClickListener implements
-            ListView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position,
-                                long id) {
-            SelectItem(position);
-        }
-    }
-
+    
 
     /**
      * This class makes the ad request and loads the ad.

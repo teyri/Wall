@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="Botty" parent="Theme.AppCompat">
+    <style name="Botty" parent="MaterialDrawerTheme">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/material_deep_teal_400</item>
         <item name="colorPrimaryDark">@color/material_deep_teal_500</item>

@@ -20,11 +20,9 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.botty.wall.Activites.SetWall0;
 import com.botty.wall.Adapters.CustomGrid;
 import com.botty.wall.R;
-import com.botty.wall.Activites.setWall;
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
 
 import java.io.InputStream;
 import java.net.URL;
@@ -32,12 +30,7 @@ import java.util.Random;
 
 public class FragmentOne extends Fragment {
 
-    private String[] cyngn = {"http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_slantstyle.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_iconoclast.png",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_headcase.png",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_harmony.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_arc.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/hanksite.jpg",
+    private String[] cyngn = {"http://gnexushd.altervista.org/wallpapers/cyanogen/hanksite.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/heresjohnny.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/hexography_blue.png",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/hexography_salmon.png",
@@ -53,7 +46,6 @@ public class FragmentOne extends Fragment {
             "http://gnexushd.altervista.org/wallpapers/cyanogen/mauve.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/sunsetgrass.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/tubetangle.jpg",
-            "http://gnexushd.altervista.org/wallpapers/gnexushd/wallpaper_eklipze_cheshireyellow.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_alexanderwislsperger_melbourne.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_ashersimonds_cmpatternhololight.png",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_eklipze_notquitemono.jpg",
@@ -64,10 +56,7 @@ public class FragmentOne extends Fragment {
             "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_tylerhodge_blueperfection.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/winter_sunset.jpg",
             "http://gnexushd.altervista.org/wallpapers/cyanogen/dystopia.jpg",
-            "http://gnexushd.altervista.org/wallpapers/cyanogen/maplebokeh.jpg",
-            "http://gnexushd.altervista.org/wallpapers/gnexushd/barnsley_silhouette.jpg",
-            "http://gnexushd.altervista.org/wallpapers/gnexushd/theicestorm.jpg",
-            "http://gnexushd.altervista.org/wallpapers/gnexushd/wallpaper_ashersimonds_cmpatternholodark.png"};
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/maplebokeh.jpg",};
 
     GridView grid;
     ProgressDialog myProgressDialog;
@@ -89,7 +78,6 @@ public class FragmentOne extends Fragment {
         final CustomGrid adapter = new CustomGrid(getActivity(), cyngn);
         grid=(GridView)view.findViewById(R.id.grid);
         mBtRandom = (ImageButton)view.findViewById(R.id.random);
-        YoYo.with(Techniques.SlideInUp).playOn(mBtRandom);
 
         grid.setVisibility(View.VISIBLE);
 
@@ -104,19 +92,20 @@ public class FragmentOne extends Fragment {
 
         grid.setAdapter(adapter);
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @TargetApi(Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 // Check if we're running on Android 5.0 or higher
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     // Call some material design APIs here
-                    Intent i = new Intent(getActivity(), setWall.class);
+                    Intent i = new Intent(getActivity(), SetWall0.class);
                     i.putExtra("pos", position);
                     Log.i("positionFrag", cyngn[position]);
                     startActivity(i, ActivityOptions.makeSceneTransitionAnimation(getActivity(), view.findViewById(R.id.grid_image), "robot").toBundle());
                 } else {
                     // Implement this feature without material design
-                    Intent i = new Intent(getActivity(), setWall.class);
+                    Intent i = new Intent(getActivity(), SetWall0.class);
                     i.putExtra("pos", position);
                     Log.i("positionFrag", cyngn[position]);
                     startActivity(i);

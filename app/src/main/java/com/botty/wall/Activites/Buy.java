@@ -63,7 +63,7 @@ public class Buy extends Activity implements BillingProcessor.IBillingHandler {
         mBuyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // bp.purchase(PRODUCT_ID);
+                //bp.purchase(PRODUCT_ID);
                // bp.consumePurchase(PRODUCT_ID);
             }
         });

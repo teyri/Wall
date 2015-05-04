@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="Botty" parent="Theme.AppCompat">
+    <style name="Botty" parent="MaterialDrawerTheme">
         <!-- Customize your theme here. -->
         <item name="android:colorPrimary">@color/material_deep_teal_200</item>
         <item name="android:statusBarColor">@color/material_deep_teal_500</item>

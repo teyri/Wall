@@ -59,18 +59,11 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://github.com/anjlab/android-inapp-billing-v3"/>
         </PreferenceScreen>
-        <PreferenceScreen
-            android:title="AndroidViewAnimations"
-            android:summary="Cute view animation collection.">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://github.com/daimajia/AndroidViewAnimations"/>
-        </PreferenceScreen>
     </PreferenceCategory>
     <PreferenceCategory
         android:title="About">
         <PreferenceScreen
-            android:title="4.1-28012015_FREE"/>
+            android:title="4.1-09122014_FREE"/>
         <PreferenceScreen
             android:title="Wall on GitHub"
             android:summary="Look at the code.">

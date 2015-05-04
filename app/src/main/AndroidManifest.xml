@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.botty.wall.Activites.setWall"
+            android:name="com.botty.wall.Activites.SetWall0"
             android:label="Wallpaper"
             android:parentActivityName=".MyActivity"
             android:theme="@style/Trasp.ActionBar" >
@@ -43,7 +43,7 @@
                 android:value="com.botty.wall.MyActivity" />
         </activity>
         <activity
-            android:name="com.botty.wall.Activites.SetWall2"
+            android:name="com.botty.wall.Activites.SetWall1"
             android:label="Wallpaper"
             android:parentActivityName=".MyActivity"
             android:theme="@style/Trasp.ActionBar" >

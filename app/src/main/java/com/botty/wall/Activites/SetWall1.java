@@ -1,31 +1,28 @@
 package com.botty.wall.Activites;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.app.WallpaperManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.botty.wall.Adapters.ImageAdapter;
 import com.botty.wall.R;
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
 
 import org.apache.http.util.ByteArrayBuffer;
 
@@ -34,28 +31,41 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLConnection;
 
 /**
  * Created by BottyIvan on 04/05/15.
  */
-public class setWall3 extends Activity {
-    private String[] PA = {"http://gnexushd.altervista.org/wallpapers/paranoid/AOSPA%20Humble%20Huckleberry%20-%203966.png",
-            "http://gnexushd.altervista.org/wallpapers/paranoid/AOSPA%20Sweater%20Weather%20-%203966.png",
-            "http://gnexushd.altervista.org/wallpapers/paranoid/AOSPA%20Triangles%20Abode%20-%203966.png",
-            "http://gnexushd.altervista.org/wallpapers/paranoid/wallpaper_0.jpg",
-            "http://gnexushd.altervista.org/wallpapers/paranoid/wallpaper_1.jpg",
-            "http://gnexushd.altervista.org/wallpapers/paranoid/wallpaper_2.jpg",
-            "http://gnexushd.altervista.org/wallpapers/paranoid/wallpaper_3.jpg",
-            "http://gnexushd.altervista.org/wallpapers/paranoid/wallpaper_4.jpg",
-            "http://gnexushd.altervista.org/wallpapers/paranoid/wallpaper_5.jpg",
-            "http://gnexushd.altervista.org/wallpapers/paranoid/wallpaper_6.jpg",
-            "http://gnexushd.altervista.org/wallpapers/paranoid/wallpaper_7.jpg",
-            "http://gnexushd.altervista.org/wallpapers/paranoid/wallpaper_8.jpg"};
+public class SetWall1 extends AppCompatActivity {
+    private String[] cyngn = { "http://gnexushd.altervista.org/wallpapers/cyanogen/hanksite.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/heresjohnny.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/hexography_blue.png",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/hexography_salmon.png",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/hextract.png",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/network.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/quartz.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/bladesplusdroplets.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/blueice_modcircle.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/decay.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/frostmaple.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/light_bursting_out.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/maplesunblaze.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/mauve.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/sunsetgrass.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/tubetangle.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_alexanderwislsperger_melbourne.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_ashersimonds_cmpatternhololight.png",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_eklipze_notquitemono.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_eklipze_technicolorstripes.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_nebkat_bokeh.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_prash_ohaimark.png",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_th_shadowchess.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/wallpaper_tylerhodge_blueperfection.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/winter_sunset.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/dystopia.jpg",
+            "http://gnexushd.altervista.org/wallpapers/cyanogen/maplebokeh.jpg",
+    };
 
     private int indexOfImage = 0;
 
@@ -63,19 +73,12 @@ public class setWall3 extends Activity {
     private ViewPager viewPager;
     ProgressDialog myProgressDialog;
     SharedPreferences settings;
-    static final String TAG = "WALL";
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_wall);
-
-        // This example uses decor view, but you can use any visible view.
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_LOW_PROFILE;
-        decorView.setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION);
-        setupTransparentSystemBarsForLmp();
 
         PreferenceManager.setDefaultValues(getApplicationContext(), R.xml.preferences, true);
         settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -85,28 +88,21 @@ public class setWall3 extends Activity {
         imageButton = (ImageButton) findViewById(R.id.set_wall_ribbon);
 
         final Intent i = getIntent();
-        final int position = i.getIntExtra("posi", 0);
-        Log.i("positionAct", PA[position]);
+        final int position = i.getIntExtra("pos", 0);
+        Log.i("positionAct", cyngn[position]);
 
-        ImageAdapter adapter = new ImageAdapter(setWall3.this, PA);
+        ImageAdapter adapter = new ImageAdapter(SetWall1.this, cyngn);
         viewPager.setOnPageChangeListener(new MyPageChangeListener());
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(position);
 
-        YoYo.with(Techniques.SlideInUp).playOn(imageButton);
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new SetWallpaperAsyncTask().execute(PA[indexOfImage]);
+                new SetWallpaperAsyncTask().execute(cyngn[indexOfImage]);
             }
         });
 
-    }
-
-    @Override
-    public void onBackPressed(){
-        super.onBackPressed();
-        YoYo.with(Techniques.SlideOutDown).playOn(imageButton);
     }
 
     private class MyPageChangeListener extends
@@ -121,7 +117,7 @@ public class setWall3 extends Activity {
 
         @Override
         protected String doInBackground(String... params) {
-            String URL = PA[indexOfImage];
+            String URL = cyngn[indexOfImage];
             setWallpaper(URL);
             return "Executed";
         }
@@ -145,7 +141,7 @@ public class setWall3 extends Activity {
 
         private void setWallpaper(String url) {
             try {
-                WallpaperManager wpm = WallpaperManager.getInstance(setWall3.this);
+                WallpaperManager wpm = WallpaperManager.getInstance(SetWall1.this);
                 InputStream ins = new URL(url).openStream();
                 wpm.setStream(ins);
             } catch (Exception e) {
@@ -155,12 +151,11 @@ public class setWall3 extends Activity {
     }
 
     private void dialog(){
-        myProgressDialog = new ProgressDialog(setWall3.this);
+        myProgressDialog = new ProgressDialog(SetWall1.this);
         myProgressDialog.setCancelable(false);
         myProgressDialog.setMessage("Loading...");
         myProgressDialog.show();
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -173,10 +168,10 @@ public class setWall3 extends Activity {
         // handle item selection
         switch (item.getItemId()) {
             case R.id.dl_wall:
-                DownloadFromUrl(PA[indexOfImage], "wall");
-                return true;
-            case R.id.home:
-                YoYo.with(Techniques.SlideOutDown).playOn(imageButton);
+                if (settings.getBoolean("dl_wall", false)) {
+                    DownloadFromUrl(cyngn[indexOfImage], "wall");
+                }else Toast.makeText(getApplicationContext(),"Only on Pro :(",Toast.LENGTH_SHORT).show();                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -185,7 +180,7 @@ public class setWall3 extends Activity {
 
     public void DownloadFromUrl(String imageURL, String fileName) {  //this is the downloader method
         try {
-            URL url = new URL(PA[indexOfImage]); //you can write here any link
+            URL url = new URL(cyngn[indexOfImage]); //you can write here any link
             File file = new java.io.File(Environment.getExternalStorageDirectory(), "Dl_Wall_app/wall_cyngn"+indexOfImage+".jpg");
 
             long startTime = System.currentTimeMillis();
@@ -222,42 +217,5 @@ public class setWall3 extends Activity {
             Log.d("ImageManager", "Error: " + e);
         }
 
-    }
-
-
-    private void setupTransparentSystemBarsForLmp() {
-        // TODO(sansid): use the APIs directly when compiling against L sdk.
-        // Currently we use reflection to access the flags and the API to set the transparency
-        // on the System bars.
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            try {
-                getWindow().getAttributes().systemUiVisibility |=
-                        (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION);
-                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
-                        | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-                Field drawsSysBackgroundsField = WindowManager.LayoutParams.class.getField(
-                        "FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS");
-                getWindow().addFlags(drawsSysBackgroundsField.getInt(null));
-
-                Method setStatusBarColorMethod =
-                        Window.class.getDeclaredMethod("setStatusBarColor", int.class);
-                Method setNavigationBarColorMethod =
-                        Window.class.getDeclaredMethod("setNavigationBarColor", int.class);
-                setStatusBarColorMethod.invoke(getWindow(), Color.TRANSPARENT);
-                setNavigationBarColorMethod.invoke(getWindow(), Color.TRANSPARENT);
-            } catch (NoSuchFieldException e) {
-                Log.w(TAG, "NoSuchFieldException while setting up transparent bars");
-            } catch (NoSuchMethodException ex) {
-                Log.w(TAG, "NoSuchMethodException while setting up transparent bars");
-            } catch (IllegalAccessException e) {
-                Log.w(TAG, "IllegalAccessException while setting up transparent bars");
-            } catch (IllegalArgumentException e) {
-                Log.w(TAG, "IllegalArgumentException while setting up transparent bars");
-            } catch (InvocationTargetException e) {
-                Log.w(TAG, "InvocationTargetException while setting up transparent bars");
-            } finally {}
-        }
     }
 }

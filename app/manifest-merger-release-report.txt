@@ -39,7 +39,7 @@ ADDED from AndroidManifest.xml:10:5
 		ADDED from AndroidManifest.xml:10:22
 uses-permission#com.android.vending.BILLING
 ADDED from AndroidManifest.xml:11:5
-MERGED from com.anjlab.android.iab.v3:library:1.0.19:11:5
+MERGED from com.anjlab.android.iab.v3:library:1.0.17:11:5
 	android:name
 		ADDED from AndroidManifest.xml:11:22
 application
@@ -50,7 +50,7 @@ MERGED from com.android.support:support-v4:21.0.0:16:5
 MERGED from com.pkmmte.view:circularimageview:1.1:11:5
 MERGED from com.google.android.gms:play-services:6.1.71:16:5
 MERGED from com.android.support:support-v4:21.0.0:16:5
-MERGED from com.anjlab.android.iab.v3:library:1.0.19:13:5
+MERGED from com.anjlab.android.iab.v3:library:1.0.17:13:5
 	android:label
 		ADDED from AndroidManifest.xml:16:9
 	android:allowBackup
@@ -107,7 +107,7 @@ ADDED from AndroidManifest.xml:41:13
 		ADDED from AndroidManifest.xml:42:17
 	android:value
 		ADDED from AndroidManifest.xml:43:17
-activity#com.botty.wall.Activites.SetWall2
+activity#com.botty.wall.Activites.SetWall
 ADDED from AndroidManifest.xml:45:9
 	android:label
 		ADDED from AndroidManifest.xml:47:13
@@ -145,9 +145,7 @@ MERGED from com.android.support:support-v4:21.0.0:15:5
 MERGED from com.pkmmte.view:circularimageview:1.1:7:5
 MERGED from com.google.android.gms:play-services:6.1.71:15:5
 MERGED from com.android.support:support-v4:21.0.0:15:5
-MERGED from com.anjlab.android.iab.v3:library:1.0.19:7:5
-MERGED from com.daimajia.easing:library:1.0.1:8:5
-MERGED from com.daimajia.androidanimations:library:1.1.3:8:5
+MERGED from com.anjlab.android.iab.v3:library:1.0.17:7:5
 	android:targetSdkVersion
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
